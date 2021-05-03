@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nulla-dies-sine-linea/lab-code-projects#readme",
   "dependencies": {
+    "hashmap": "^2.4.0",
     "loadsh": "0.0.4",
     "typescript": "^4.2.4"
   }

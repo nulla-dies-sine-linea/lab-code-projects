@@ -1,4 +1,5 @@
 const _ = require('loadsh');
+const HashMap = require('hashmap')
 // #JS-1.3
 
 let object = {
@@ -179,3 +180,20 @@ let promise2 = new Promise(function(resolve, reject) {
         console.log(error);
     }
 })();
+
+// #JS-2.5
+
+let nums = [2, 7, 11, 15];
+let target = 9;
+
+let pairs = new HashMap();
+
+for(let i = 0; i < nums.length; i++){
+    if (pairs.has(nums[i])){
+        console.log(i + ", " + nums.indexOf(pairs.get(nums[i])))
+    }
+    else{
+        pairs.set(target - nums[i], nums[i]);
+    }
+}
+
