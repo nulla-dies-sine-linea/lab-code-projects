@@ -164,7 +164,7 @@ let promise2 = new Promise(function(resolve, reject) {
 (async() => {
     try{
         let promise3 = new Promise(function(resolve, reject) {  
-            let n = 5;
+            let n = 5
             if (n > 7) {
                 setTimeout(() => resolve("nice done"), 3000);
             } else{
