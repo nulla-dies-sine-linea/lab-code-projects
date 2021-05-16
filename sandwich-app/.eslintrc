@@ -1,0 +1,30 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"extends": [
+		"react-app",
+		"airbnb",
+		"prettier",
+		"plugin:prettier/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"env": {
+		"browser": true,
+		"jest": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"rules": {},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"typescript": {}
+			}
+		}
+	}
+}
