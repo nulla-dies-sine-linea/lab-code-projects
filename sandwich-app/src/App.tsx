@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Layout from './HOC/layout/layout';
 
 const App = (): JSX.Element => {
-	return <div className='App'>it works</div>;
+	useEffect(() => {}, []);
+
+	return (
+		<div className='App'>
+			<Layout>
+				<h1>Content</h1>
+			</Layout>
+		</div>
+	);
 };
 
 export default App;

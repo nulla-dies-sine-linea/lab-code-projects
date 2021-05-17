@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, makeStyles, Theme, Typography } from '@material-ui/core';
-import classes from '*.module.css';
+// import classes from '*.module.css';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const Footer = (): JSX.Element => {
+	const classes = useStyles();
 	return (
 		<div className={classes.root}>
 			<Typography>All Rights Reserved</Typography>
