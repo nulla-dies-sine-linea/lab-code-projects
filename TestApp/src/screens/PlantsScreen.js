@@ -5,13 +5,12 @@ const PlantsScreen = props => {
   const {route} = props;
   const {data} = route.params;
   console.log('PLANT PROPS', data);
-  const {title, content, id} = data;
+  const {id, state, city, street} = data;
   return (
     <View>
-      <Text>PLANTS SCREEN</Text>
-      <Text>{id}</Text>
-      <Text>{title}</Text>
-      <Text>{content}</Text>
+      <Text>{city}</Text>
+      <Text>State: {state}</Text>
+      <Text>Street: {street}</Text>
     </View>
   );
 };

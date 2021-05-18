@@ -1,0 +1,92 @@
+[
+  {
+    "_id": 0,
+    "state": "Alabama",
+    "city": "Florence",
+    "street": "Richmond Street"
+  },
+  {
+    "_id": 1,
+    "state": "Virginia",
+    "city": "Hessville",
+    "street": "Narrows Avenue"
+  },
+  {
+    "_id": 2,
+    "state": "Palau",
+    "city": "Beason",
+    "street": "Union Avenue"
+  },
+  {
+    "_id": 3,
+    "state": "Missouri",
+    "city": "Kohatk",
+    "street": "Ditmars Street"
+  },
+  {
+    "_id": 4,
+    "state": "Utah",
+    "city": "Eureka",
+    "street": "Lloyd Street"
+  },
+  {
+    "_id": 5,
+    "state": "Montana",
+    "city": "Grapeview",
+    "street": "Liberty Avenue"
+  },
+  {
+    "_id": 6,
+    "state": "Nebraska",
+    "city": "Woodlake",
+    "street": "Hope Street"
+  },
+  {
+    "_id": 7,
+    "state": "North Carolina",
+    "city": "Lindisfarne",
+    "street": "Schermerhorn Street"
+  },
+  {
+    "_id": 8,
+    "state": "Washington",
+    "city": "Darbydale",
+    "street": "Walker Court"
+  },
+  {
+    "_id": 9,
+    "state": "Tennessee",
+    "city": "Bowie",
+    "street": "Boerum Place"
+  },
+  {
+    "_id": 10,
+    "state": "Mississippi",
+    "city": "Como",
+    "street": "Trucklemans Lane"
+  },
+  {
+    "_id": 11,
+    "state": "Arizona",
+    "city": "Lisco",
+    "street": "Fleet Place"
+  },
+  {
+    "_id": 12,
+    "state": "Colorado",
+    "city": "Alleghenyville",
+    "street": "Brown Street"
+  },
+  {
+    "_id": 13,
+    "state": "Alaska",
+    "city": "Monument",
+    "street": "Dover Street"
+  },
+  {
+    "_id": 14,
+    "state": "Texas",
+    "city": "Epworth",
+    "street": "Lake Place"
+  }
+]
