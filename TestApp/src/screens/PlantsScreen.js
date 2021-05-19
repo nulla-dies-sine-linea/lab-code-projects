@@ -9,7 +9,7 @@ const PlantsScreen = props => {
   return (
     <View>
       <Text style={styles.city}>{city}</Text>
-      <Text>State: {state}</Text>
+      <Text style={styles.street}>State: {state}</Text>
       <Text style={styles.street}>Street: {street}</Text>
     </View>
   );

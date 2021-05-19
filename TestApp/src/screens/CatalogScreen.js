@@ -1,5 +1,7 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
+import axious from 'axious';
+import axios from 'axios';
 
 const CatalogScreen = props => {
   const cityData = require('../data/city.json');
@@ -22,6 +24,12 @@ const CatalogScreen = props => {
   //       content: 'BLBLBLBLLB3',
   //     },
   //   ];
+
+  //   const fetchData = () => {
+  //       axios
+  //       .get
+  //       .then
+  //   }
 
   return (
     <View style={{backgroundColor: 'white', flex: 1}}>
