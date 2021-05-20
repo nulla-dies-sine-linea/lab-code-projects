@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
-import axious from 'axious';
 import axios from 'axios';
 
 const CatalogScreen = props => {
@@ -39,7 +38,7 @@ const CatalogScreen = props => {
         renderItem={item => {
           console.log('ITEM', item);
           return (
-            <View>
+            <View key={item.item.id}>
               <TouchableOpacity
                 style={styles.button}
                 onPress={() => {
@@ -50,7 +49,7 @@ const CatalogScreen = props => {
             </View>
           );
         }}
-        keyExtractor={item => item.id}
+        // keyExtractor={item => item.id}
       />
     </View>
   );

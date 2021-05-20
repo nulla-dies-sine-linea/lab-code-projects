@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, createStyles, Theme, Typography } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { HomeOutlined, ShoppingBasketOutlined } from '@material-ui/icons';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 // import { connect } from 'react-redux';
 import constants from '../../common/constans';
 // import { StoreType } from '../../store';
@@ -31,15 +31,24 @@ const NavigationHeader = (): JSX.Element => {
 	const classes = useStyles();
 
 	const theme = useTheme();
+	const history = useHistory();
 
 	return (
 		<div className={classes.root}>
 			<div className={classes.content}>
-				<Button color='secondary' variant='contained'>
+				<Button
+					color='secondary'
+					variant='contained'
+					onClick={() => history.push('/')}
+				>
 					<HomeOutlined style={{ color: theme.palette.primary.light }} />
 				</Button>
 
-				<Button color='secondary' variant='contained'>
+				<Button
+					color='secondary'
+					variant='contained'
+					onClick={() => history.push('/basket')}
+				>
 					<ShoppingBasketOutlined
 						style={{ color: theme.palette.primary.light }}
 					/>

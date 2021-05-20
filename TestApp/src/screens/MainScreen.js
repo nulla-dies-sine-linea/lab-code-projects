@@ -8,10 +8,16 @@ const MainScreen = props => {
     <View>
       <Text>MAIN SCREEN</Text>
       <Button
-        title="To News Screen"
+        title="Go to news"
         onPress={() => {
           navigation.navigate('NewsScreen');
           console.log('PRESSED');
+        }}
+      />
+      <Button
+        title="Take photo"
+        onPress={() => {
+          navigation.navigate('CameraScreen');
         }}
       />
     </View>
