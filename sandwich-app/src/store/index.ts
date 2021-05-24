@@ -1,7 +1,7 @@
 import { createStore, compose, combineReducers } from 'redux';
 import { throttle } from 'lodash';
 import ingredientsReducer from './ingredients';
-// import ordersReducer from './orders';
+import ordersReducer from './order';
 import {
 	loadFromLocalStorage,
 	saveToLocalStorage,
@@ -17,7 +17,7 @@ const composeEnhancers =
 
 const rootReducer = combineReducers({
 	ingredients: ingredientsReducer,
-	// orders: ordersReducer,
+	orders: ordersReducer,
 });
 
 const store = createStore(
@@ -31,7 +31,7 @@ store.subscribe(
 		saveToLocalStorage(
 			{
 				ingredients: store.getState().ingredients,
-				// orders: store.getState().orders,
+				orders: store.getState().orders,
 			},
 			LOCAL_STORAGE_REDUX_NAME
 		);
