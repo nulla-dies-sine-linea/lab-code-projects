@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import store from './store';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
 
 const theme = createMuiTheme({
 	palette: {

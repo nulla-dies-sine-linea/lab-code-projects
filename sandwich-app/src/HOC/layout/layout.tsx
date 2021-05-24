@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 const Layout = (props: Iprops): JSX.Element => {
 	const { children } = props;
 	const classes = useStyles();
-	useEffect(() => {}, []);
+	// useEffect(() => {}, []);
 
 	return (
 		<div className={classes.root}>

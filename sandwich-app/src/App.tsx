@@ -3,7 +3,7 @@ import Layout from './HOC/layout/layout';
 import Routes from './routes/index';
 
 const App = (): JSX.Element => {
-	useEffect(() => {}, []);
+	// useEffect(() => {}, []);
 
 	return (
 		<div className='App'>

@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
-import SandwichBread from '../Sandwich/Ingredients/SandwichBread';
-import SandwichBacon from '../Sandwich/Ingredients/SandwichBacon';
-import SandwichCheese from '../Sandwich/Ingredients/SandwichCheese';
-import SandwichCucumber from '../Sandwich/Ingredients/SandwichCucumber';
+import SandwichBread from './Ingredients/SandwichBread';
+import SandwichBacon from './Ingredients/SandwichBacon';
+import SandwichCheese from './Ingredients/SandwichCheese';
+import SandwichCucumber from './Ingredients/SandwichCucumber';
 
 const useStyles = makeStyles((theme) =>
 	createStyles({

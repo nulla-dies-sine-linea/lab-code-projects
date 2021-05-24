@@ -3,9 +3,9 @@ import { Button, createStyles, Theme, Typography } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { HomeOutlined, ShoppingBasketOutlined } from '@material-ui/icons';
 import { useHistory } from 'react-router-dom';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import constants from '../../common/constans';
-// import { StoreType } from '../../store';
+import { StoreType } from '../../store';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -27,11 +27,27 @@ const useStyles = makeStyles((theme: Theme) =>
 	})
 );
 
-const NavigationHeader = (): JSX.Element => {
+interface IProps {
+	orders: StoreType['orders'];
+}
+
+const NavigationHeader = (props: IProps): JSX.Element => {
 	const classes = useStyles();
+	const { orders } = props;
 
 	const theme = useTheme();
 	const history = useHistory();
+
+	let ordersAmount = null;
+
+	if (Object.keys(orders).length > 0) {
+		ordersAmount = (
+			<Typography variant='body1' component='span' color='primary'>
+				{Object.keys(orders).length}
+				&nbsp; &nbsp;
+			</Typography>
+		);
+	}
 
 	return (
 		<div className={classes.root}>
@@ -58,4 +74,10 @@ const NavigationHeader = (): JSX.Element => {
 	);
 };
 
-export default NavigationHeader;
+const mapStateToProps = (state: StoreType) => {
+	return {
+		orders: state.orders,
+	};
+};
+
+export default connect(mapStateToProps)(NavigationHeader);

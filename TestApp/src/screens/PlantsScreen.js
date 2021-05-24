@@ -5,25 +5,35 @@ const PlantsScreen = props => {
   const {route} = props;
   const {data} = route.params;
   console.log('PLANT PROPS', data);
-  const {id, state, city, street} = data;
+  const {
+    id,
+    name,
+    type,
+    description,
+    review,
+    logo,
+    phone_number,
+    address,
+    hours,
+  } = data;
   return (
     <View>
-      <Text style={styles.city}>{city}</Text>
-      <Text style={styles.street}>State: {state}</Text>
-      <Text style={styles.street}>Street: {street}</Text>
+      <Text style={styles.name}>{name}</Text>
+      <Text style={styles.type}>Type: {type}</Text>
+      <Text style={styles.type}>Descriptiont: {description}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  city: {
+  name: {
     color: '#ff4411',
     fontSize: 48,
     fontFamily: 'Signika',
     // sans-serif,
     paddingBottom: 10,
   },
-  street: {
+  type: {
     fontFamily: 'Inder',
     lineHeight: 28,
     marginBottom: 15,

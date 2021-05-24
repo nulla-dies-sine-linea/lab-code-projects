@@ -1,9 +1,16 @@
-import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  FlatList,
+  ActivityIndicator,
+} from 'react-native';
 import axios from 'axios';
 
 const CatalogScreen = props => {
-  const cityData = require('../data/city.json');
+  // const cityData = require('../data/city.json');
   const {navigation} = props;
 
   //   const data = [
@@ -30,11 +37,37 @@ const CatalogScreen = props => {
   //       .then
   //   }
 
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
+    axios
+      .get(
+        'https://random-data-api.com/api/restaurant/random_restaurant?size=10',
+      )
+      .then(response => {
+        console.log('RESPONSE', response.data);
+        setData(response.data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.log('ERROR', error);
+      });
+  };
+
+  if (loading) {
+    return <ActivityIndicator size="large" color="green" />;
+  }
+
   return (
     <View style={{backgroundColor: 'white', flex: 1}}>
       <Text>CATALOG SCREEN</Text>
       <FlatList
-        data={cityData}
+        data={data}
         renderItem={item => {
           console.log('ITEM', item);
           return (
@@ -44,7 +77,7 @@ const CatalogScreen = props => {
                 onPress={() => {
                   navigation.navigate('PlantsScreen', {data: item.item});
                 }}>
-                <Text>{item.item.city}</Text>
+                <Text>{item.item.name}</Text>
               </TouchableOpacity>
             </View>
           );
